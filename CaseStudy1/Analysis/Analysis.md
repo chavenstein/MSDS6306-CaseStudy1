@@ -3,18 +3,16 @@ Analysis.Rmd
 Festus Yaboah, Chris Havenstein, and Cam Lu
 July 7, 2017
 
-Testing
+### Please set your working directory to the Analysis folder.
+
+Depending on the directory you cloned the "MSDS6306-CaseStudy1" into, the path to the "Analysis" folder should be similar to:
+
+-   ./root/CaseStudy1/Analysis
+
+In the code below, I set an absolute path to the Analysis folder on my computer.
 
 ``` r
-getwd()
-```
-
-    ## [1] "C:/Users/Chris/Desktop/GIT home/caseStudy1/CaseStudy1/Analysis"
-
-Please set your working directory to the Analysis folder.
-
-``` r
-setwd("C:/Users/Chris/Desktop/GIT home/caseStudy1/CaseStudy1/Analysis")
+setwd("C:/Users/Chris/Desktop/GIT home/root/CaseStudy1/Analysis")
 ```
 
 Source Makefile.R
@@ -65,8 +63,7 @@ source("./Data/Makefile.R")
 Question 1 on Merged Data:
 --------------------------
 
-Merge the data based on country shortcode. How many of the IDs match?
----------------------------------------------------------------------
+### Merge the data based on country shortcode. How many of the IDs match?
 
 ``` r
 nrow(MergeData)
@@ -74,17 +71,14 @@ nrow(MergeData)
 
     ## [1] 187
 
-187 country shortcodes match.
------------------------------
+#### 187 country shortcodes match.
 
 Question 2 on Merged Data:
 --------------------------
 
-Sort the data frame in ascending order by GDP (so United States is last).
--------------------------------------------------------------------------
+### Sort the data frame in ascending order by GDP (so United States is last).
 
-What is the 13th country in the resulting data frame?
------------------------------------------------------
+### What is the 13th country in the resulting data frame?
 
 ``` r
 MergeData <- MergeData[order(MergeData$GDP),]
@@ -94,5 +88,4 @@ MergeData[13,3]
 
     ## [1] "Samoa"
 
-Answer: The 13th Country in the reordered data is Samoa.
---------------------------------------------------------
+#### Answer: The 13th Country in the reordered data is Samoa.
