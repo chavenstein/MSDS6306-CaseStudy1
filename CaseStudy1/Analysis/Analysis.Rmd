@@ -2,7 +2,7 @@
 title: "Analysis.Rmd"
 author: "Festus Yaboah, Chris Havenstein, and Cam Lu"
 date: "July 7, 2017"
-output: html_document
+output: github_document
 ---
 
 Testing
