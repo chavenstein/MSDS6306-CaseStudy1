@@ -1,0 +1,196 @@
+"CountryCode","Rank","CountryName","GDP"
+"USA","1","United States",18569100
+"CHN","2","China",11199145
+"JPN","3","Japan",4939384
+"DEU","4","Germany",3466757
+"GBR","5","United Kingdom",2618886
+"FRA","6","France",2465454
+"IND","7","India",2263523
+"ITA","8","Italy",1849970
+"BRA","9","Brazil",1796187
+"CAN","10","Canada",1529760
+"KOR","11","Korea, Rep.",1411246
+"RUS","12","Russian Federation",1283162
+"ESP","13","Spain",1232088
+"AUS","14","Australia",1204616
+"MEX","15","Mexico",1045998
+"IDN","16","Indonesia",932259
+"TUR","17","Turkey",857749
+"NLD","18","Netherlands",770845
+"CHE","19","Switzerland",659827
+"SAU","20","Saudi Arabia",646438
+"ARG","21","Argentina",545866
+"SWE","22","Sweden",511000
+"POL","23","Poland",469509
+"BEL","24","Belgium",466366
+"THA","25","Thailand",406840
+"NGA","26","Nigeria",405083
+"IRN","27","Iran, Islamic Rep.",393436
+"AUT","28","Austria",386428
+"NOR","29","Norway",370557
+"ARE","30","United Arab Emirates",348743
+"EGY","31","Egypt, Arab Rep.",336297
+"HKG","32","Hong Kong SAR, China",320912
+"ISR","33","Israel",318744
+"DNK","34","Denmark",306143
+"PHL","35","Philippines",304905
+"SGP","36","Singapore",296966
+"MYS","37","Malaysia",296359
+"ZAF","38","South Africa",294841
+"IRL","39","Ireland",294054
+"PAK","40","Pakistan",283660
+"COL","41","Colombia",282463
+"CHL","42","Chile",247028
+"FIN","43","Finland",236785
+"BGD","44","Bangladesh",221415
+"PRT","45","Portugal",204565
+"VNM","46","Vietnam",202616
+"GRC","47","Greece",194559
+"CZE","48","Czech Republic",192925
+"PER","49","Peru",192094
+"ROU","50","Romania",186691
+"NZL","51","New Zealand",185017
+"IRQ","52","Iraq",171489
+"DZA","53","Algeria",156080
+"QAT","54","Qatar",152469
+"KAZ","55","Kazakhstan",133657
+"HUN","56","Hungary",124343
+"KWT","57","Kuwait",114041
+"MAR","58","Morocco",101445
+"ECU","59","Ecuador",97802
+"SDN","60","Sudan",95584
+"UKR","61","Ukraine",93270
+"AGO","62","Angola",89633
+"SVK","63","Slovak Republic",89552
+"CUB","64","Cuba",87133
+"LKA","65","Sri Lanka",81322
+"ETH","66","Ethiopia",72374
+"DOM","67","Dominican Republic",71584
+"KEN","68","Kenya",70529
+"GTM","69","Guatemala",68763
+"MMR","70","Myanmar",67430
+"UZB","71","Uzbekistan",67220
+"OMN","72","Oman",66293
+"LUX","73","Luxembourg",59948
+"CRI","74","Costa Rica",57436
+"PAN","75","Panama",55188
+"URY","76","Uruguay",52420
+"BGR","77","Bulgaria",52395
+"HRV","78","Croatia",50425
+"LBN","79","Lebanon",47537
+"BLR","80","Belarus",47433
+"TZA","81","Tanzania",47431
+"MAC","82","Macao SAR, China",44803
+"SVN","83","Slovenia",43991
+"LTU","84","Lithuania",42739
+"GHA","85","Ghana",42690
+"TUN","86","Tunisia",42063
+"JOR","87","Jordan",38655
+"AZE","88","Azerbaijan",37848
+"SRB","89","Serbia",37745
+"TKM","90","Turkmenistan",36180
+"CIV","91","Côte d'Ivoire",36165
+"COD","92","Congo, Dem. Rep.",34999
+"BOL","93","Bolivia",33806
+"BHR","94","Bahrain",31859
+"LVA","95","Latvia",27677
+"PRY","96","Paraguay",27441
+"YEM","97","Yemen, Rep.",27318
+"SLV","98","El Salvador",26797
+"UGA","99","Uganda",25528
+"CMR","100","Cameroon",24204
+"EST","101","Estonia",23137
+"HND","102","Honduras",21517
+"NPL","103","Nepal",21144
+"TTO","104","Trinidad and Tobago",20989
+"ISL","105","Iceland",20047
+"KHM","106","Cambodia",20017
+"CYP","107","Cyprus",19802
+"ZMB","108","Zambia",19551
+"AFG","109","Afghanistan",19469
+"PNG","110","Papua New Guinea",16929
+"BIH","111","Bosnia and Herzegovina",16560
+"ZWE","112","Zimbabwe",16289
+"LAO","113","Lao PDR",15903
+"BWA","114","Botswana",15275
+"SEN","115","Senegal",14765
+"GEO","116","Georgia",14333
+"GAB","117","Gabon",14214
+"MLI","118","Mali",14045
+"JAM","119","Jamaica",14027
+"PSE","120","West Bank and Gaza",13397
+"NIC","121","Nicaragua",13231
+"MUS","122","Mauritius",12164
+"BFA","123","Burkina Faso",12115
+"ALB","124","Albania",11927
+"BRN","125","Brunei Darussalam",11400
+"MNG","126","Mongolia",11160
+"MOZ","127","Mozambique",11015
+"MLT","128","Malta",10949
+"MKD","129","Macedonia, FYR",10900
+"ARM","130","Armenia",10547
+"NAM","131","Namibia",10267
+"GNQ","132","Equatorial Guinea",10179
+"MDG","133","Madagascar",9991
+"TCD","134","Chad",9601
+"BHS","135","Bahamas, The",9047
+"SSD","136","South Sudan",9015
+"BEN","137","Benin",8583
+"RWA","138","Rwanda",8376
+"HTI","139","Haiti",8023
+"COG","140","Congo, Rep.",7834
+"NER","141","Niger",7509
+"IMN","142","Isle of Man",7428
+"TJK","143","Tajikistan",6952
+"MDA","144","Moldova",6750
+"LIE","145","Liechtenstein",6664
+"XKX","146","Kosovo",6650
+"KGZ","147","Kyrgyz Republic",6551
+"GIN","148","Guinea",6299
+"SOM","149","Somalia",6217
+"GUM","150","Guam",5734
+"MWI","151","Malawi",5442
+"MRT","152","Mauritania",4635
+"FJI","153","Fiji",4632
+"BRB","154","Barbados",4588
+"TGO","155","Togo",4400
+"MNE","156","Montenegro",4173
+"VIR","157","Virgin Islands (U.S.)",3765
+"SWZ","158","Swaziland",3727
+"SLE","159","Sierra Leone",3669
+"SUR","160","Suriname",3621
+"MDV","161","Maldives",3591
+"GUY","162","Guyana",3446
+"BDI","163","Burundi",3007
+"BTN","164","Bhutan",2237
+"GRL","165","Greenland",2220
+"LSO","166","Lesotho",2200
+"LBR","167","Liberia",2101
+"BLZ","168","Belize",1765
+"CAF","169","Central African Republic",1756
+"DJI","170","Djibouti",1727
+"CPV","171","Cabo Verde",1617
+"ATG","172","Antigua and Barbuda",1449
+"TLS","173","Timor-Leste",1442
+"SYC","174","Seychelles",1427
+"LCA","175","St. Lucia",1379
+"SLB","176","Solomon Islands",1202
+"GNB","177","Guinea-Bissau",1126
+"GRD","178","Grenada",1016
+"GMB","179","Gambia, The",965
+"MNP","180","Northern Mariana Islands",922
+"KNA","181","St. Kitts and Nevis",917
+"WSM","182","Samoa",786
+"VUT","183","Vanuatu",774
+"VCT","184","St. Vincent and the Grenadines",771
+"ASM","185","American Samoa",641
+"COM","186","Comoros",617
+"DMA","187","Dominica",525
+"TON","188","Tonga",395
+"STP","189","São Tomé and Principe",351
+"FSM","190","Micronesia, Fed. Sts.",322
+"PLW","191","Palau",293
+"MHL","192","Marshall Islands",183
+"KIR","193","Kiribati",166
+"NRU","194","Nauru",102
+"TUV","195","Tuvalu",34
