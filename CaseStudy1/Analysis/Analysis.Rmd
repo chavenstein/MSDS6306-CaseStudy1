@@ -1,14 +1,22 @@
 ---
-title: "Analysis.md"
+title: "Analysis.Rmd"
 author: "Festus Yaboah, Chris Havenstein, and Cam Lu"
-date: "July 4, 2017"
+date: "July 7, 2017"
 output: html_document
 ---
 
+Testing
+```{r getwd}
+getwd()
+```
+
+
 Please set your working directory to the Analysis folder.
-```{r setwd, echo=FALSE}
+
+```{r setwd}
 setwd("C:/Users/Chris/Desktop/GIT home/caseStudy1/CaseStudy1/Analysis")
 ```
+
 
 Source Makefile.R
 
@@ -16,6 +24,8 @@ Source Makefile.R
 source("./Data/Makefile.R")
 
 ```
+
+
 ## Question 1 on Merged Data: 
 ## Merge the data based on country shortcode. How many of the IDs match?
 ```{r CountRows}
@@ -34,6 +44,3 @@ MergeData <- MergeData[order(MergeData$GDP),]
 MergeData[13,3]
 ```
 ## Answer: The 13th Country in the reordered data is Samoa.
-
-
-
