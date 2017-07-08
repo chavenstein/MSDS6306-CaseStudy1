@@ -60,5 +60,5 @@ Data set                     | Link to Data set
     + The analysis in "Analysis.Rmd" sources "Makefile.R", which in turn sources, in order: "Gather1.R", "Clean1.R", "Gather2.R", "Clean2.R", and then last "MergeData.R."
     
     + **Please navigate to the ./CaseStudy1/Analysis/ folder to view the analysis.**
-    + If you are viewing the analysis in Github, please specifically navigate to the file "Analysis.md" in the ./CaseStudy1/Analysis/ folder.**This will allow you to view the output to the R code snippets in Github.**
+    + If you are viewing the analysis in Github, please specifically navigate to the file "Analysis.md" in the ./CaseStudy1/Analysis/ folder. **This will allow you to view the output to the R code snippets in Github.**
 
