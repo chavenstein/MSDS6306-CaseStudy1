@@ -9,7 +9,7 @@ Depending on the directory you cloned the "MSDS6306-CaseStudy1" into, the path t
 
 -   ./root/CaseStudy1/Analysis
 
-In the code below, I set an absolute path to the Analysis folder on my computer.
+By modifying "Analysis.Rmd" in the Analysis folder, I set an absolute path to the Analysis folder on my computer.
 
 ``` r
 setwd("C:/Users/Chris/Desktop/GIT home/root/CaseStudy1/Analysis")
