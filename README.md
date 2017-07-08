@@ -23,7 +23,7 @@ Data set                     | Link to Data set
 
 1. Upon initially downloading the GDP and Education data sets, it was determined that some cleaning was required. 
 
-    + Note: This process of downloading the data was performed in the R script files "Gather1.R" and "Gather2.R". These files can be found within the "Analysis/Data/" folder.
+    + Note: This process of downloading the data was performed in the R script files "Gather1.R" and "Gather2.R". These files can be found within the "Analysis/Data/" folder. Other R script files used in the analysis are also included in the "Analysis/Data/" folder.
 
 2. We began the analysis by examining the "GDP.csv" downloaded with "Gather1.R".
 
