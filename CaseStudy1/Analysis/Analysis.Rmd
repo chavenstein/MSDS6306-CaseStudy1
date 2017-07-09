@@ -2,7 +2,7 @@
 title: "Analysis.Rmd"
 author: "Festus Yaboah, Chris Havenstein, and Cam Lu"
 date: "July 7, 2017"
-output: html_document
+output: github_document
 ---
 
 
@@ -112,24 +112,6 @@ library(ggplot2)
 
 ```{r GDPbyIncomeGroup}
 ggplot(MergeData, aes(x=CountryCode, y=GDP))+geom_bar(aes(fill =MergeData$Income.Group), stat="identity")+ theme(axis.text.x=element_blank(),axis.ticks.x=element_blank())
-
-```
-
-
-### However, we didn't like the output results from ggplot, since the labels were very scrunched together. As an alternative for the user, we have also presented the GDP by income group visualization using the plotly package.
-
-#### To proceed, we loaded the package "plotly". If you do not have plotly installed. You will need to run the R function for install.packages with plotly passed as a parameter. This looks like the following, below.
-
-#####install.packages("plotly") 
-
-```{r plotly, echo=FALSE , message=FALSE}
-library(plotly)
-```
-
-```{r plotlyplot }
-# Create the Plotly plot for GDP by Income Group.
-# Note: The user can zoom in and out and pan this plot.
-plot_ly(  x = MergeData$CountryCode,  y = MergeData$GDP,  type = "bar",  color=MergeData$Income.Group)
 
 ```
 
