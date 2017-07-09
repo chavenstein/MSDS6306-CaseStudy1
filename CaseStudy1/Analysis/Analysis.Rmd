@@ -2,8 +2,9 @@
 title: "Analysis.Rmd"
 author: "Festus Yaboah, Chris Havenstein, and Cam Lu"
 date: "July 7, 2017"
-output: github_document
+output: html_document
 ---
+
 
 ### Please set your working directory to the Analysis folder.
 
@@ -53,3 +54,111 @@ MergeData[13,3]
 ```
 
 #### Answer: The 13th Country in the reordered data is Samoa.
+
+
+## Question 3 on Merged Data:
+
+### What are the average GDP rankings for the "High income:OECD" and "High income: nonOECD" groups?
+
+#### To proceed, we loaded the package "dplyr". If you do not have dplyr installed. You will need to run the R function for install.packages with dplyr passed as a parameter. This looks like the following, below.
+
+#####install.packages("dplyr") 
+
+```{r dplyr, echo=FALSE , message=FALSE}
+
+library(dplyr)
+```
+
+
+```{r filter}
+
+#Create a filtered data frame by income group = "High income: OECD".
+Filter.Cat.OECD <-c("High income: OECD")
+Filtered.OECD <- filter(MergeData,Income.Group %in% Filter.Cat.OECD)
+
+#Create a second filtered data frame by income group = "High income: nonOECD".
+Filter.Cat.nonOECD <-c("High income: nonOECD")
+Filtered.nonOECD <- filter(MergeData,Income.Group %in% Filter.Cat.nonOECD)
+
+#Find the average rank for both filtered data frames
+Average.Rank.OECD =mean(Filtered.OECD$Rank)
+Average.Rank.nonOECD =mean(Filtered.nonOECD$Rank)
+
+#output the average ranks to the user
+
+#The average GDP rank for the income group 'High income: OECD' is: 31.9333. 
+Average.Rank.OECD
+
+#The average GDP rank for the income group 'High income: nonOECD' is: 101.375.
+Average.Rank.nonOECD
+
+```
+####The countries in the 'High income: OCED' income group tend to have a Higher GDP on average than the 'High income: nonOCED' income group countries.
+
+
+## Question 4 on Merged Data:
+
+### Plot the GDP for all of the countries. Use ggplot2 to color your plot by Income Group.
+
+#### To proceed, we loaded the package "ggplot2". If you do not have ggplot2 installed. You will need to run the R function for install.packages with ggplot2 passed as a parameter. This looks like the following, below.
+
+#####install.packages("ggplot2") 
+
+```{r ggplot2, echo=FALSE , message=FALSE}
+
+library(ggplot2)
+```
+
+
+```{r GDPbyIncomeGroup}
+ggplot(MergeData, aes(x=CountryCode, y=GDP))+geom_bar(aes(fill =MergeData$Income.Group), stat="identity")+ theme(axis.text.x=element_blank(),axis.ticks.x=element_blank())
+
+```
+
+
+### However, we didn't like the output results from ggplot, since the labels were very scrunched together. As an alternative for the user, we have also presented the GDP by income group visualization using the plotly package.
+
+#### To proceed, we loaded the package "plotly". If you do not have plotly installed. You will need to run the R function for install.packages with plotly passed as a parameter. This looks like the following, below.
+
+#####install.packages("plotly") 
+
+```{r plotly, echo=FALSE , message=FALSE}
+library(plotly)
+```
+
+```{r plotlyplot }
+# Create the Plotly plot for GDP by Income Group.
+# Note: The user can zoom in and out and pan this plot.
+plot_ly(  x = MergeData$CountryCode,  y = MergeData$GDP,  type = "bar",  color=MergeData$Income.Group)
+
+```
+
+## Question 5 on Merged Data:
+
+###Find countries in  the  top 38 that are in the Lower middle income group.
+
+```{r top38}
+#Break GDP into 5 quantiles
+
+MergeData$Quantile <- as.numeric(with(MergeData, cut(GDP,                                 breaks=quantile(GDP, probs=seq(0,1, by=0.2), na.rm=TRUE),                                 include.lowest=TRUE)))
+
+#Get Relevant Columns
+
+MergeData_subset <-MergeData[,c(1,2,5,6,35)]
+
+#Find countries in  the  top 38 that are in the Lower middle income group.
+
+#Create a table of income groups vs the 5 GDP quantile groups
+table(MergeData_subset$Income.Group,MergeData_subset$Quantile)
+
+#If you know that the 5th quantile is what you are looking for, you can tell that there are 7 countries in the Lower middle income group. However, we wanted to double check that this assumption about the 5th quartile is correct.
+
+#So, we created a subset with rank less than 39 and in the "Lower middle income" group.
+Top38subset <- subset(MergeData_subset,Rank < 39 & MergeData_subset$Income.Group=="Lower middle income")
+
+#Here is the count of the countries in the Lower middle income group but are in the top 38 countries for highest GDP.
+nrow(Top38subset)
+
+#These countries are:
+Top38subset
+```
