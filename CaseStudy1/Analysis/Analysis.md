@@ -156,7 +156,7 @@ Question 5 on Merged Data:
 ``` r
 #Break GDP into 5 quantiles
 
-MergeData$Quantile <- as.numeric(with(MergeData, cut(GDP,                                 breaks=quantile(GDP, probs=seq(0,1, by=0.2), na.rm=TRUE),                                 include.lowest=TRUE)))
+MergeData$Quantile <- as.numeric(with(MergeData, cut(GDP,breaks=quantile(GDP, probs=seq(0,1, by=0.2), na.rm=TRUE),                                 include.lowest=TRUE)))
 
 #Get Relevant Columns
 

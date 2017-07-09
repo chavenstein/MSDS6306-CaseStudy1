@@ -122,7 +122,7 @@ ggplot(MergeData, aes(x=CountryCode, y=GDP))+geom_bar(aes(fill =MergeData$Income
 ```{r top38}
 #Break GDP into 5 quantiles
 
-MergeData$Quantile <- as.numeric(with(MergeData, cut(GDP,                                 breaks=quantile(GDP, probs=seq(0,1, by=0.2), na.rm=TRUE),                                 include.lowest=TRUE)))
+MergeData$Quantile <- as.numeric(with(MergeData, cut(GDP,breaks=quantile(GDP, probs=seq(0,1, by=0.2), na.rm=TRUE),                                 include.lowest=TRUE)))
 
 #Get Relevant Columns
 
