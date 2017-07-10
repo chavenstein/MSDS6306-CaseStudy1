@@ -3,7 +3,10 @@ Analysis.Rmd
 Festus Yaboah, Chris Havenstein, and Cam Lu
 July 7, 2017
 
-### Please set your working directory to the Analysis folder.
+Analysis
+========
+
+#### To begin the analysis, please set your working directory to the Analysis folder.
 
 Depending on the directory you cloned the "MSDS6306-CaseStudy1" into, the path to the "Analysis" folder should be similar to:
 
@@ -15,7 +18,7 @@ By modifying "Analysis.Rmd" in the Analysis folder, I set an absolute path to th
 setwd("C:/Users/Chris/Desktop/GIT home/root/CaseStudy1/Analysis")
 ```
 
-Source Makefile.R
+Then, source Makefile.R
 
 ``` r
 source("./Data/Makefile.R")
@@ -60,10 +63,12 @@ source("./Data/Makefile.R")
     ## 
     ## MergeData.csv has been created from CleanGDP.csv and CleanEDSTATS_Country.csv.
 
+At this point, Makefile.R has completed running and has loaded the merged data for analysis.
+
 Question 1 on Merged Data:
 --------------------------
 
-### Merge the data based on country shortcode. How many of the IDs match?
+#### Merge the data based on country shortcode. How many of the IDs match?
 
 ``` r
 nrow(MergeData)
@@ -71,14 +76,12 @@ nrow(MergeData)
 
     ## [1] 187
 
-#### 187 country shortcodes match.
+*Answer*: There are 187 country shortcodes match.
 
 Question 2 on Merged Data:
 --------------------------
 
-### Sort the data frame in ascending order by GDP (so United States is last).
-
-### What is the 13th country in the resulting data frame?
+#### Sort the data frame in ascending order by GDP (so United States is last). What is the 13th country in the resulting data frame?
 
 ``` r
 MergeData <- MergeData[order(MergeData$GDP),]
@@ -88,16 +91,18 @@ MergeData[13,3]
 
     ## [1] "Samoa"
 
-#### Answer: The 13th Country in the reordered data is Samoa.
+*Answer*: The 13th country in this reordered data is Samoa.
 
 Question 3 on Merged Data:
 --------------------------
 
-### What are the average GDP rankings for the "High income:OECD" and "High income: nonOECD" groups?
+#### What are the average GDP rankings for the "High income:OECD" and "High income: nonOECD" groups?
 
-#### To proceed, we loaded the package "dplyr". If you do not have dplyr installed. You will need to run the R function for install.packages with dplyr passed as a parameter. This looks like the following, below.
+To proceed, we loaded the package "dplyr". If you do not have dplyr installed. You will need to run the R function for install.packages with dplyr passed as a parameter. This looks like the following, below.
 
-##### install.packages("dplyr")
+-   install.packages("dplyr")
+
+<!-- -->
 
     ## Warning: package 'dplyr' was built under R version 3.2.5
 
@@ -116,42 +121,55 @@ Average.Rank.nonOECD =mean(Filtered.nonOECD$Rank)
 
 #output the average ranks to the user
 
-#The average GDP rank for the income group 'High income: OECD' is: 31.9333. 
+#Display the Average Rank for the "High income: OECD" group to the user.
 Average.Rank.OECD
 ```
 
     ## [1] 31.93333
 
 ``` r
-#The average GDP rank for the income group 'High income: nonOECD' is: 101.375.
+#Display the Average Rank for the "High income: nonOECD" group to the user.
 Average.Rank.nonOECD
 ```
 
     ## [1] 101.375
 
-#### The countries in the 'High income: OCED' income group tend to have a Higher GDP on average than the 'High income: nonOCED' income group countries.
+*Answer*: The average GDP rank for the income group 'High income: OECD' is: 31.9333. The average GDP rank for the income group 'High income: nonOECD' is: 101.375.
+
+The countries in the 'High income: OCED' income group tend to have a Higher GDP on average than the 'High income: nonOCED' income group countries.
 
 Question 4 on Merged Data:
 --------------------------
 
-### Plot the GDP for all of the countries. Use ggplot2 to color your plot by Income Group.
+#### Plot the GDP for all of the countries. Use ggplot2 to color your plot by Income Group.
 
-#### To proceed, we loaded the package "ggplot2". If you do not have ggplot2 installed. You will need to run the R function for install.packages with ggplot2 passed as a parameter. This looks like the following, below.
+To proceed, we loaded the package "ggplot2" and "scales". If you do not have ggplot2 or scales installed, you will need to run the R function for install.packages with ggplot2 and then scales passed as parameters. This looks like the following, below.
 
-##### install.packages("ggplot2")
+-   install.packages("ggplot2")
+-   install.packages("scales")
+
+<!-- -->
 
     ## Warning: package 'ggplot2' was built under R version 3.2.5
 
+    ## Warning: package 'scales' was built under R version 3.2.5
+
 ``` r
-ggplot(MergeData, aes(x=CountryCode, y=GDP))+geom_bar(aes(fill =MergeData$Income.Group), stat="identity")+ theme(axis.text.x=element_blank(),axis.ticks.x=element_blank())
+##The bar chart for CountryCode and GDP colored by income group is created, below.
+##We removed the CountryCode labels because they were not clearly visible.
+
+ggplot(MergeData, aes(x = CountryCode, y=GDP))+geom_bar(aes(fill =Income.Group), stat="identity")+ theme(axis.text.x=element_blank(),axis.ticks.x=element_blank(),legend.position="right",legend.text=element_text(size=8)
+)+ scale_y_continuous(name="GDP", labels = comma)
 ```
 
 ![](Analysis_files/figure-markdown_github/GDPbyIncomeGroup-1.png)
 
+*Answer*: The GDP by income group plot has been displayed, above.
+
 Question 5 on Merged Data:
 --------------------------
 
-### Find countries in the top 38 that are in the Lower middle income group.
+#### Find countries in the top 38 that are in the Lower middle income group.
 
 ``` r
 #Break GDP into 5 quantiles
@@ -209,3 +227,16 @@ Top38subset
     ## 78         5
     ## 79         5
     ## 33         5
+
+*Answer*: The countries that are ranked in the top 38 by GDP and are in the lower middle income group are: The Philippines, Egypt, Nigeria, Thailand, Indonesia, India, and China.
+
+Conclusion:
+-----------
+
+-   To summarize, the merged data was matched on 187 country codes with GDP rankings, that were not an aggregate group. We want to emphasize that our data set does not include aggregate groups since they did not have GDP with an associated rank. Since they had no relevant GDP data, they were removed from the analysis. The result was 2 merged rows that were removed from the merged clean data set.
+
+-   We explored the average GDP ranking for different income groups. We focused on the "High income: OECD" and "High income: nonOECD" income groups. We found the average ranking for the "High income: OECD" group was 31.9333. The average ranking for the "High income: nonOECD" group was 101.375. Since a lower GDP ranking corresponds to a higher GDP, the "High income: nonOECD" group was associated with -on average- countries with a lower GDP. The "High income: OECD" group on average corresponded to countries with a higher average GDP.
+
+-   When plotting countries by GDP and coloring by income group, countries in the "High income OECD" group on average tended to have the highest GDPs. The exception to this China, that is in the "Lower middle income" group and has the second highest GDP.
+
+-   The key finding of this analysis is that there are seven countries ranked in the top 38 by GDP, but are placed in the lower middle income group. There could be a number of reasons for this that suggest areas for future research. A key variable the research team considered that could be related is population. However, population was not included in the merged clean data set.
