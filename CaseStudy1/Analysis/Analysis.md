@@ -76,7 +76,7 @@ nrow(MergeData)
 
     ## [1] 187
 
-*Answer*: There are 187 country shortcodes that match.
+*Answer*: There are 187 country short codes that match.
 
 Question 2 on Merged Data:
 --------------------------
