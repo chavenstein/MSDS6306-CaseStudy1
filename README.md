@@ -11,7 +11,7 @@ output: html_document
 
 ### Goal: 
 
-By using two publicly available data sets, shown in the table below, we want to determine if GDP and income groups by country are related. Since the columns to answer this research question are not contained in one data set alone, we must merge the data from both data sets together.
+By using two publicly available data sets, shown in the table below, we want to explore how GDP and income groups by country are related. Since the columns to answer this research question are not contained in one data set alone, we must merge the data from both data sets together.
 
 Data set                     | Link to Data set 
 --------------------------- | ---------------
@@ -41,7 +41,7 @@ Data set                     | Link to Data set
 4. Next, we examined the education data contained in "EDSTATS_Country.csv."
 
     + The key columns of interest in "EDSTATS_Country.csv" were "CountryCode", country "Long.Name", "Income.Group".
-    + There were country codes that pertained to aggregate categories, as in "GDP.csv." These aggregate categories did have associated income groups. Since they did not contain income groups and did not relate to a single country, they were removed from our clean data set.
+    + There were country codes that pertained to aggregate categories, as in "GDP.csv." These aggregate categories did not have associated income groups. Since they did not contain income groups and did not relate to a single country, they were removed from our clean data set.
 
 
 5. Cleaning steps were performed on "EDSTATS_Country.csv" using the R script "Clean2.R."
@@ -59,6 +59,6 @@ Data set                     | Link to Data set
 
     + The analysis in "Analysis.Rmd" sources "Makefile.R", which in turn sources, in order: "Gather1.R", "Clean1.R", "Gather2.R", "Clean2.R", and then last "MergeData.R."
     
-    + **Please navigate to the ./CaseStudy1/Analysis/ folder to view the analysis.**
+    + **Please navigate to the ./CaseStudy1/Analysis/ folder to view the analysis. Or, use this [link](https://github.com/chavenstein/MSDS6306-CaseStudy1/blob/master/CaseStudy1/Analysis/Analysis.md).** 
     + If you are viewing the analysis in GitHub, please specifically navigate to the file "Analysis.md" in the ./CaseStudy1/Analysis/ folder. **This will allow you to view the output to the R code snippets in GitHub.**
 

@@ -147,7 +147,7 @@ table(MergeData_subset$Income.Group,MergeData_subset$Quantile)
 
 #If you know that the 5th quantile is what you are looking for,
 #you can tell that there are 7 countries in the Lower middle income group. 
-#However, we wanted to double check that this assumption about the 5th quartile is correct.
+#However, we wanted to double check that this assumption about the 5th quantile is correct.
 
 #So, we created a subset with rank less than 39 and in the "Lower middle income" group.
 Top38subset <- subset(MergeData_subset,Rank < 39 & MergeData_subset$Income.Group=="Lower middle income")
