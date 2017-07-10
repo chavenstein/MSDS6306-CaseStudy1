@@ -38,7 +38,7 @@ At this point, Makefile.R has completed running and has loaded the merged data f
 ```{r CountRows}
 nrow(MergeData)
 ```
-*Answer*: There are 187 country shortcodes match.
+*Answer*: There are 187 country shortcodes that match.
 
 
 
@@ -59,7 +59,7 @@ MergeData[13,3]
 
 #### What are the average GDP rankings for the "High income:OECD" and "High income: nonOECD" groups?
 
-To proceed, we loaded the package "dplyr". If you do not have dplyr installed. You will need to run the R function for install.packages with dplyr passed as a parameter. This looks like the following, below.
+To proceed, we loaded the package "dplyr". If you do not have dplyr installed, you will need to run the R function for install.packages with dplyr passed as a parameter. This looks like the following, below.
 
 * install.packages("dplyr") 
 
@@ -80,8 +80,8 @@ Filter.Cat.nonOECD <-c("High income: nonOECD")
 Filtered.nonOECD <- filter(MergeData,Income.Group %in% Filter.Cat.nonOECD)
 
 #Find the average rank for both filtered data frames
-Average.Rank.OECD =mean(Filtered.OECD$Rank)
-Average.Rank.nonOECD =mean(Filtered.nonOECD$Rank)
+Average.Rank.OECD <- mean(Filtered.OECD$Rank)
+Average.Rank.nonOECD <- mean(Filtered.nonOECD$Rank)
 
 #output the average ranks to the user
 
@@ -101,7 +101,7 @@ The countries in the 'High income: OCED' income group tend to have a Higher GDP 
 
 #### Plot the GDP for all of the countries. Use ggplot2 to color your plot by Income Group.
 
- To proceed, we loaded the package "ggplot2" and "scales". If you do not have ggplot2 or scales installed, you will need to run the R function for install.packages with ggplot2 and then scales passed as parameters. This looks like the following, below.
+ To proceed, we loaded the packages "ggplot2" and "scales". If you do not have ggplot2 or scales installed, you will need to run the R function for install.packages with ggplot2 and then scales passed as parameters. This looks like the following, below.
 
 * install.packages("ggplot2") 
 * install.packages("scales")
@@ -134,7 +134,7 @@ ggplot(MergeData, aes(x = CountryCode, y=GDP))+geom_bar(aes(fill =Income.Group),
 ```{r top38}
 #Break GDP into 5 quantiles
 
-MergeData$Quantile <- as.numeric(with(MergeData, cut(GDP,breaks=quantile(GDP, probs=seq(0,1, by=0.2), na.rm=TRUE),                                 include.lowest=TRUE)))
+MergeData$Quantile <- as.numeric(with(MergeData, cut(GDP,breaks=quantile(GDP, probs=seq(0,1, by=0.2), na.rm=TRUE), include.lowest=TRUE)))
 
 #Get Relevant Columns
 
@@ -145,12 +145,15 @@ MergeData_subset <-MergeData[,c(1,2,5,6,35)]
 #Create a table of income groups vs the 5 GDP quantile groups
 table(MergeData_subset$Income.Group,MergeData_subset$Quantile)
 
-#If you know that the 5th quantile is what you are looking for, you can tell that there are 7 countries in the Lower middle income group. However, we wanted to double check that this assumption about the 5th quartile is correct.
+#If you know that the 5th quantile is what you are looking for,
+#you can tell that there are 7 countries in the Lower middle income group. 
+#However, we wanted to double check that this assumption about the 5th quartile is correct.
 
 #So, we created a subset with rank less than 39 and in the "Lower middle income" group.
 Top38subset <- subset(MergeData_subset,Rank < 39 & MergeData_subset$Income.Group=="Lower middle income")
 
-#Here is the count of the countries in the Lower middle income group but are in the top 38 countries for highest GDP.
+#Here is the count of the countries in the Lower middle income group 
+#but are in the top 38 countries for highest GDP.
 nrow(Top38subset)
 
 #These countries are:
