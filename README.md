@@ -1,6 +1,6 @@
 ---
 title: "README.md"
-author: "Festus Yaboah, Chris Havenstein, and Cam Lu"
+author: "Festus Yeboah, Chris Havenstein, and Cam Lu"
 date: "July 7, 2017"
 output: html_document
 ---
