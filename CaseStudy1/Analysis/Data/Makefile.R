@@ -16,8 +16,8 @@ source("./Data/Gather2.R")
 # Clean FEDSTATS_Country.csv and create Clean_EDSTATS_Country.csv
 source("./Data/Clean2.R")
 
-# Merge the cleaned dataframes into one dataframe called CleanedData
-# create CleanedData.csv and a codebookm in .md file.
+# Merge the cleaned dataframes into one dataframe called MergeData
+# create MergeData.csv
 source("./Data/MergeData.R")
 
 
